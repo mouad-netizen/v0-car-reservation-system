@@ -1,11 +1,9 @@
 -- Drop existing policies if they exist, then recreate
-DO $$ BEGIN
-  DROP POLICY IF EXISTS "cars_insert_public" ON public.cars;
-  DROP POLICY IF EXISTS "cars_update_public" ON public.cars;
-  DROP POLICY IF EXISTS "cars_delete_public" ON public.cars;
-  DROP POLICY IF EXISTS "reservations_update_public" ON public.reservations;
-  DROP POLICY IF EXISTS "reservations_delete_public" ON public.reservations;
-END $$;
+DROP POLICY IF EXISTS "cars_insert_public" ON public.cars;
+DROP POLICY IF EXISTS "cars_update_public" ON public.cars;
+DROP POLICY IF EXISTS "cars_delete_public" ON public.cars;
+DROP POLICY IF EXISTS "reservations_update_public" ON public.reservations;
+DROP POLICY IF EXISTS "reservations_delete_public" ON public.reservations;
 
 -- Add RLS policies for cars management (INSERT, UPDATE, DELETE)
 CREATE POLICY "cars_insert_public" ON public.cars FOR INSERT WITH CHECK (true);

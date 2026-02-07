@@ -16,7 +16,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, Calendar, Euro } from "lucide-react"
-import { createReservation } from '@/lib/api' // Import createReservation function
 
 interface ReservationModalProps {
   car: Car | null

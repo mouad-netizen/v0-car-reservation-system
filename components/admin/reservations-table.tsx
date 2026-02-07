@@ -2,8 +2,7 @@
 
 import React from "react"
 import { useState } from "react"
-import { Reservation } from '@/types' // Import Reservation type
-import { useStore } from 'zustand' // Import useStore hook
+
 import {
   Table,
   TableBody,
@@ -29,7 +28,6 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { MoreHorizontal, Search, Check, X, Clock, CheckCircle2 } from 'lucide-react'
-import { updateReservationStatus } from '@/api/reservations' // Import updateReservationStatus function
 
 interface ReservationsTableProps {
   limit?: number
@@ -110,7 +108,7 @@ export function ReservationsTable({ limit, showFilters = false, reservations: in
               className="pl-10"
             />
           </div>
-          <Select value={statusFilter} onValueChange={(v) => setStatusFilter(v as Reservation["status"] | "all")}>
+          <Select value={statusFilter} onValueChange={(v) => setStatusFilter(v)}>
             <SelectTrigger className="w-40">
               <SelectValue placeholder="Statut" />
             </SelectTrigger>

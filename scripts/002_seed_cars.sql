@@ -1,14 +1,13 @@
--- Insert sample cars into the database
-INSERT INTO public.cars (name, brand, model, year, category, price_per_day, transmission, fuel, seats, image, available)
+-- Insert sample cars
+INSERT INTO public.cars (name, brand, model, category, year, daily_price, seats, transmission, fuel_type, image_url, description, available)
 VALUES
-  ('Peugeot 3008', 'Peugeot', '3008', 2024, 'SUV', 85, 'Automatique', 'Hybride', 5, '/cars/peugeot-3008.jpg', true),
-  ('Renault Clio', 'Renault', 'Clio', 2023, 'Citadine', 45, 'Manuelle', 'Essence', 5, '/cars/renault-clio.jpg', true),
-  ('BMW Série 3', 'BMW', 'Série 3', 2024, 'Berline', 120, 'Automatique', 'Diesel', 5, '/cars/bmw-serie3.jpg', true),
-  ('Mercedes Classe A', 'Mercedes', 'Classe A', 2023, 'Berline', 95, 'Automatique', 'Essence', 5, '/cars/mercedes-a.jpg', true),
-  ('Tesla Model 3', 'Tesla', 'Model 3', 2024, 'Berline', 130, 'Automatique', 'Électrique', 5, '/cars/tesla-model3.jpg', true),
-  ('Citroën C3', 'Citroën', 'C3', 2023, 'Citadine', 40, 'Manuelle', 'Essence', 5, '/cars/citroen-c3.jpg', true),
-  ('Audi A4', 'Audi', 'A4', 2024, 'Berline', 110, 'Automatique', 'Diesel', 5, '/cars/audi-a4.jpg', true),
-  ('Volkswagen Golf', 'Volkswagen', 'Golf', 2023, 'Citadine', 55, 'Manuelle', 'Essence', 5, '/cars/vw-golf.jpg', true),
-  ('Porsche 911', 'Porsche', '911', 2024, 'Sport', 350, 'Automatique', 'Essence', 2, '/cars/porsche-911.jpg', true),
-  ('Ford Transit', 'Ford', 'Transit', 2023, 'Utilitaire', 75, 'Manuelle', 'Diesel', 3, '/cars/ford-transit.jpg', true)
-ON CONFLICT DO NOTHING;
+  ('Peugeot 3008', 'Peugeot', '3008', 'SUV', 2024, 89.99, 5, 'Automatique', 'Hybride', '/cars/peugeot-3008.jpg', 'SUV compact spacieux avec intérieur moderne', true),
+  ('Renault Clio', 'Renault', 'Clio', 'Citadine', 2023, 49.99, 5, 'Manuelle', 'Essence', '/cars/renault-clio.jpg', 'Citadine agile et économique', true),
+  ('BMW Série 3', 'BMW', '320i', 'Berline', 2024, 129.99, 5, 'Automatique', 'Diesel', '/cars/bmw-serie3.jpg', 'Berline de luxe avec technologie avancée', true),
+  ('Mercedes-Benz Classe A', 'Mercedes', 'A 180', 'Berline', 2023, 119.99, 5, 'Automatique', 'Essence', '/cars/mercedes-a.jpg', 'Voiture premium avec design élégant', true),
+  ('Tesla Model 3', 'Tesla', 'Model 3', 'Berline', 2024, 139.99, 5, 'Automatique', 'Électrique', '/cars/tesla-model3.jpg', 'Voiture électrique avec autonomie exceptionnelle', true),
+  ('Citroën C3', 'Citroën', 'C3', 'Citadine', 2023, 45.99, 5, 'Manuelle', 'Essence', '/cars/citroen-c3.jpg', 'Citadine colorée et pratique', true),
+  ('Audi A4', 'Audi', 'A4', 'Berline', 2024, 119.99, 5, 'Automatique', 'Diesel', '/cars/audi-a4.jpg', 'Berline sportive avec conduite dynamique', true),
+  ('Volkswagen Golf', 'Volkswagen', 'Golf', 'Berline', 2023, 69.99, 5, 'Manuelle', 'Essence', '/cars/vw-golf.jpg', 'Classique fiable avec excellente maniabilité', true),
+  ('Porsche 911', 'Porsche', '911', 'Sport', 2024, 249.99, 2, 'Automatique', 'Essence', '/cars/porsche-911.jpg', 'Voiture de sport légendaire avec performances exceptionnelles', true),
+  ('Ford Transit', 'Ford', 'Transit', 'Utilitaire', 2023, 99.99, 3, 'Manuelle', 'Diesel', '/cars/ford-transit.jpg', 'Fourgonnette spacieuse pour le transport', true);

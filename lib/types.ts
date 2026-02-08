@@ -5,27 +5,42 @@ export interface Car {
   model: string
   year: number
   category: "SUV" | "Berline" | "Citadine" | "Sport" | "Utilitaire"
-  pricePerDay: number
+  pricePerDay?: number
+  daily_price?: number
   transmission: "Automatique" | "Manuelle"
-  fuel: "Essence" | "Diesel" | "Électrique" | "Hybride"
+  fuel?: "Essence" | "Diesel" | "Électrique" | "Hybride"
+  fuel_type?: "Essence" | "Diesel" | "Électrique" | "Hybride"
   seats: number
-  image: string
+  image?: string
+  image_url?: string
   available: boolean
+  description?: string
+  created_at?: string
+  price_per_day?: number
 }
 
 export interface Reservation {
   id: string
-  carId: string
-  car: Car
-  firstName: string
-  lastName: string
+  car_id: string
+  carId?: string
+  car?: Car
+  cars?: Car
+  first_name: string
+  firstName?: string
+  last_name: string
+  lastName?: string
   phone: string
   email?: string
-  startDate: string
-  endDate: string
-  totalPrice: number
+  start_date: string
+  startDate?: string
+  end_date: string
+  endDate?: string
+  total_price: number
+  totalPrice?: number
   status: "pending" | "confirmed" | "completed" | "cancelled"
-  createdAt: string
+  created_at?: string
+  createdAt?: string
+  updated_at?: string
 }
 
 export interface ReservationFormData {
